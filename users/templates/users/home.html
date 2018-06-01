@@ -5,5 +5,11 @@
 </head>
 <body>
 Hello {{user.username}}
+<ul>
+                        <li>
+                            <a href="{% url 'users:logout_user' %}" class="navbar-brand">
+                        Logout
+                            </a>
+                        </li></ul>
 </body>
 </html>

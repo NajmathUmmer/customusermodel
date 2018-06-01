@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 
 
 
-
+@login_required(login_url='/login')
 def logout_user(request):
 	logout(request)
 	return render(request, 'users/login.html')
@@ -18,7 +18,6 @@ def logout_user(request):
 
 	
 def login_user(request):
-	print("1111111111111111111111")
 	if request.user.is_authenticated:
 		return redirect('/')
 	if request.method == "POST":
